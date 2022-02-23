@@ -1,0 +1,651 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.stanford.edu/BMI210/hgrossman-mschwede-jkong-mzielinski"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.stanford.edu/BMI210/hgrossman-mschwede-jkong-mzielinski">
+    <Prefix name="" IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AboveDiaphragm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AgeIPS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AlbuminIPS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#BSymptoms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#BelowDiaphragm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#BulkyDisease"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Classic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#ClinicalFeatures"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#EarlyClassic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#EarlyNL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#ExtralymphaticRegions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Favorable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Fever"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#GenderIPS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#HemoglobinIPS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#HodgkinLymphoma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#I"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#II"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IIA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IIB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#III"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IPSComponents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IV"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LAxilla"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LCervicalSCL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LHium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LICLSubpectoral"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LIliac"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LInguinalFemoral"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LateClassic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LateNL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LymphocytesIPS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Mediastinum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Mesenteric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#NightSweats"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#NodalRegions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#NodularLymphocytePredominant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#OtherDistant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#OtherNearby"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Patient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#PatientWithHodgkins"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#RAxilla"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#RCervicalSCL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#RHilum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#RICLSubpectoral"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#RInguinalFemoral"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Rliac"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Spleen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Stage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#StageIPS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Unfavorable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#WeightLoss"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#WhiteBloodCellsIPS"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#HasIPSScore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#HasStage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Albumin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Demographic"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#ESR"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Gender"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Hemoglobin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Labs"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LymphocyteCount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Lymphocytepercentage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Temperature"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#VitalSigns"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#WeightChange"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#WhiteBloodCells"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Hannah"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AgeIPS"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Age"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:int"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">45</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AlbuminIPS"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Albumin"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">4</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Fever"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Temperature"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">38</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#GenderIPS"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Gender"/>
+            <DataOneOf>
+                <Literal>male</Literal>
+            </DataOneOf>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#HemoglobinIPS"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Hemoglobin"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IV"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#StageIPS"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LymphocytesIPS"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LymphocyteCount"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">600</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LymphocytesIPS"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Lymphocytepercentage"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">8</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#WeightLoss"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#WeightChange"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">-0.1</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#WhiteBloodCellsIPS"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#WhiteBloodCells"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">15</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AboveDiaphragm"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#NodalRegions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AgeIPS"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IPSComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AlbuminIPS"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IPSComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#BSymptoms"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#ClinicalFeatures"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#BelowDiaphragm"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#NodalRegions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#BulkyDisease"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#ClinicalFeatures"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Classic"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#HodgkinLymphoma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#EarlyClassic"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Classic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#EarlyNL"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#NodularLymphocytePredominant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#ExtralymphaticRegions"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#ClinicalFeatures"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Favorable"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#EarlyClassic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Fever"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#BSymptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#GenderIPS"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IPSComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#HemoglobinIPS"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IPSComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#I"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Stage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IA"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#I"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IB"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#I"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#II"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Stage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IIA"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#II"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IIB"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#II"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#III"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Stage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IPSComponents"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#ClinicalFeatures"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IV"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Stage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LAxilla"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AboveDiaphragm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LCervicalSCL"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AboveDiaphragm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LHium"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AboveDiaphragm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LICLSubpectoral"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AboveDiaphragm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LIliac"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#BelowDiaphragm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LInguinalFemoral"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#BelowDiaphragm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LateClassic"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Classic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LateNL"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#NodularLymphocytePredominant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LymphocytesIPS"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IPSComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Mediastinum"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AboveDiaphragm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Mesenteric"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#BelowDiaphragm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#NightSweats"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#BSymptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#NodalRegions"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#ClinicalFeatures"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#NodularLymphocytePredominant"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#HodgkinLymphoma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#OtherDistant"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#ExtralymphaticRegions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#OtherNearby"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#ExtralymphaticRegions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Patient"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Age"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Patient"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Gender"/>
+            <DataOneOf>
+                <Literal>female</Literal>
+                <Literal>male</Literal>
+            </DataOneOf>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#PatientWithHodgkins"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Patient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#PatientWithHodgkins"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#HasStage"/>
+            <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Stage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#RAxilla"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AboveDiaphragm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#RCervicalSCL"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AboveDiaphragm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#RHilum"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AboveDiaphragm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#RICLSubpectoral"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#AboveDiaphragm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#RInguinalFemoral"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#BelowDiaphragm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Rliac"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#BelowDiaphragm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Spleen"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#ExtralymphaticRegions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#StageIPS"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IPSComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Unfavorable"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#EarlyClassic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#WeightLoss"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#BSymptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#WhiteBloodCellsIPS"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IPSComponents"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#I"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#II"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#III"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IV"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IA"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IB"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IIA"/>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IIB"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#PatientWithHodgkins"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Hannah"/>
+    </ClassAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#HasStage"/>
+    </FunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#HasStage"/>
+    </AsymmetricObjectProperty>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Age"/>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Demographic"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Albumin"/>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Labs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#ESR"/>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Labs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Gender"/>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Demographic"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Hemoglobin"/>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Labs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#LymphocyteCount"/>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Labs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Lymphocytepercentage"/>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Labs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Temperature"/>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#VitalSigns"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#WeightChange"/>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#VitalSigns"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#WhiteBloodCells"/>
+        <DataProperty IRI="http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Labs"/>
+    </SubDataPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#ExtralymphaticRegions</IRI>
+        <Literal>lymphatic regions near, far, or the spleen, relative to the cancerous area</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#IPSComponents</IRI>
+        <Literal>Boolean variables
+total score is sum of all the values of each component
+total score effects risk stratification and potential treatment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/hgrossman/ontologies/2022/1/untitled-ontology-10#Temperature</IRI>
+        <Literal>in Celsius</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
