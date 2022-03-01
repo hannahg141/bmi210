@@ -97,6 +97,12 @@
         <Class IRI="#II"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#IIA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IIB"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#III"/>
     </Declaration>
     <Declaration>
@@ -211,9 +217,6 @@
         <Class IRI="#WhiteBloodCellsIPS"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#HasDisease"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#HasExtranodalRegion"/>
     </Declaration>
     <Declaration>
@@ -272,9 +275,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#MediastinalMassRatio"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#NodesInvolved"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#RadiologyFeatures"/>
@@ -356,13 +356,10 @@
         <Class IRI="#EarlyClassic"/>
         <ObjectIntersectionOf>
             <Class IRI="#Classic"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#HasStage"/>
-                <ObjectUnionOf>
-                    <Class IRI="#I"/>
-                    <Class IRI="#II"/>
-                </ObjectUnionOf>
-            </ObjectSomeValuesFrom>
+            <ObjectUnionOf>
+                <Class IRI="#I"/>
+                <Class IRI="#II"/>
+            </ObjectUnionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -467,7 +464,7 @@
     <EquivalentClasses>
         <Class IRI="#IA"/>
         <ObjectIntersectionOf>
-            <Class IRI="#II"/>
+            <Class IRI="#I"/>
             <ObjectExactCardinality cardinality="0">
                 <ObjectProperty IRI="#HasSymptoms"/>
                 <Class IRI="#BSymptoms"/>
@@ -477,11 +474,11 @@
     <EquivalentClasses>
         <Class IRI="#IB"/>
         <ObjectIntersectionOf>
-            <Class IRI="#II"/>
-            <ObjectMinCardinality cardinality="1">
+            <Class IRI="#I"/>
+            <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#HasSymptoms"/>
                 <Class IRI="#BSymptoms"/>
-            </ObjectMinCardinality>
+            </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -516,6 +513,26 @@
                 <Class IRI="#BelowDiaphragm"/>
             </ObjectMinCardinality>
         </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#IIA"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#II"/>
+            <ObjectExactCardinality cardinality="0">
+                <ObjectProperty IRI="#HasSymptoms"/>
+                <Class IRI="#BSymptoms"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#IIB"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#II"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#HasSymptoms"/>
+                <Class IRI="#BSymptoms"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#III"/>
@@ -561,88 +578,13 @@
         </ObjectMinCardinality>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#LAxilla"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>left axilla</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#LCervicalSCL"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>left cervical</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#LCervicalSCL"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>left supraclavicular</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#LICLSubpectoral"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>left infraclavicular</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#LICLSubpectoral"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>left subpectoral</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#LIliac"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>left iliac</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#LInguinalFemoral"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>left femoral</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#LInguinalFemoral"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>left inguinal</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#LateClassic"/>
         <ObjectIntersectionOf>
             <Class IRI="#Classic"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#HasStage"/>
-                <ObjectUnionOf>
-                    <Class IRI="#III"/>
-                    <Class IRI="#IV"/>
-                </ObjectUnionOf>
-            </ObjectSomeValuesFrom>
+            <ObjectUnionOf>
+                <Class IRI="#III"/>
+                <Class IRI="#IV"/>
+            </ObjectUnionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -657,15 +599,6 @@
                 </ObjectUnionOf>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#LeftHilum"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>left hilum</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Localized"/>
@@ -701,24 +634,6 @@
         </DataSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Mediastinum"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>mediastinum</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Mesenteric"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>mesenteric</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#NightSweats"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#Symptoms"/>
@@ -733,87 +648,6 @@
             <DataProperty IRI="#Histology"/>
             <Literal>nodular lymphocyte predominant</Literal>
         </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#RAxilla"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>right axilla</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#RCervicalSCL"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>right cervical</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#RCervicalSCL"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>right supraclavicular</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#RHilum"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>right hilum</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#RICLSubpectoral"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>right infraclavicular</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#RICLSubpectoral"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>right subpectoral</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#RInguinalFemoral"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>right femoral</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#RInguinalFemoral"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>right inguinal</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Rliac"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#NodesInvolved"/>
-            <DataOneOf>
-                <Literal>right iliac</Literal>
-            </DataOneOf>
-        </DataSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Spleen"/>
@@ -1028,34 +862,20 @@
         <Class IRI="#I"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#IA"/>
-        <Class IRI="#II"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#IA"/>
-        <ObjectExactCardinality cardinality="0">
-            <ObjectProperty IRI="#HasSymptoms"/>
-            <Class IRI="#BSymptoms"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#IB"/>
         <Class IRI="#I"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#IB"/>
-        <Class IRI="#II"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#IB"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="#HasSymptoms"/>
-            <Class IRI="#BSymptoms"/>
-        </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#II"/>
         <Class IRI="#Stage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IIA"/>
+        <Class IRI="#II"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IIB"/>
+        <Class IRI="#II"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#III"/>
@@ -1177,10 +997,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PatientWithHodgkins"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#HasDisease"/>
-            <Class IRI="#HodgkinLymphoma"/>
-        </ObjectExactCardinality>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#HasLymphNodeRegion"/>
+            <Class IRI="#NodalRegions"/>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#RAxilla"/>
@@ -1262,6 +1082,9 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <FunctionalObjectProperty>
+        <ObjectProperty IRI="#HasSize"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
         <ObjectProperty IRI="#HasStage"/>
     </FunctionalObjectProperty>
     <AsymmetricObjectProperty>
@@ -1309,10 +1132,6 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#MediastinalMassRatio"/>
-        <DataProperty IRI="#RadiologyFeatures"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#NodesInvolved"/>
         <DataProperty IRI="#RadiologyFeatures"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -1431,11 +1250,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#HasDisease</IRI>
-        <Literal>Used to indicate that a patient has Hodgkin lymphoma</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#HasExtranodalRegion</IRI>
         <Literal>Used to indicate the involved extranodal regions</Literal>
     </AnnotationAssertion>
@@ -1515,11 +1329,6 @@ total score affects risk stratification and potential treatment in advanced stag
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#NightSweats</IRI>
         <Literal xml:lang="en">Drenching night sweats requiring change of shirt or sheets</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#NodesInvolved</IRI>
-        <Literal>Can take values left hilum, right hilum, left axilla, right axilla, left cervical, right cervical, left supraclavicular, right supraclavicular, mediastinum, right infraclavicular, left infraclavicular, right subpectoral, left subpectoral, left iliac, right iliac, left femoral, right femoral, left inguinal, right inguinal, mesenteric</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
