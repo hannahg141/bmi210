@@ -437,6 +437,10 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#HodgkinLymphoma"/>
+        <Class IRI="#PatientWithHodgkins"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#I"/>
         <ObjectUnionOf>
             <ObjectIntersectionOf>
@@ -994,13 +998,6 @@
     <SubClassOf>
         <Class IRI="#PatientWithHodgkins"/>
         <Class IRI="#Patient"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PatientWithHodgkins"/>
-        <ObjectMinCardinality cardinality="0">
-            <ObjectProperty IRI="#HasLymphNodeRegion"/>
-            <Class IRI="#NodalRegions"/>
-        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#RAxilla"/>
