@@ -1,0 +1,805 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/13603/ontologies/2022/2/untitled-ontology-13"
+         xmlns="http://www.semanticweb.org/13603/ontologies/2022/2/untitled-ontology-13#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/13603/ontologies/2022/2/untitled-ontology-13"/>
+
+<owl:ObjectProperty rdf:about="#has_extra_nodal_region"/>
+
+<owl:ObjectProperty rdf:about="#has_lymph_node_region"/>
+
+<owl:ObjectProperty rdf:about="#has_symptoms"/>
+
+<owl:Class rdf:about="#ClinicalFeatures">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BSymptoms">
+  <rdfs:subClassOf rdf:resource="#ClinicalFeatures"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ExtraNodalRegion">
+  <rdfs:subClassOf rdf:resource="#ClinicalFeatures"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Distant">
+  <rdfs:subClassOf rdf:resource="#ExtraNodalRegion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Localized">
+  <rdfs:subClassOf rdf:resource="#ExtraNodalRegion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Spleen">
+  <rdfs:subClassOf rdf:resource="#ExtraNodalRegion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LymphNodeRegion">
+  <rdfs:subClassOf rdf:resource="#ClinicalFeatures"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AboveDiaphragm">
+  <rdfs:subClassOf rdf:resource="#LymphNodeRegion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BelowDiaphragm">
+  <rdfs:subClassOf rdf:resource="#LymphNodeRegion"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Stage">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:oneOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Robert"/>
+        <rdf:Description rdf:about="#Betsy"/>
+        <rdf:Description rdf:about="#Caroline"/>
+      </owl:oneOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Distant"/>
+            <owl:Class>
+              <owl:oneOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#localized"/>
+                <rdf:Description rdf:about="#spleen"/>
+              </owl:oneOf>
+            </owl:Class>
+          </owl:unionOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#AboveDiaphragm"/>
+            <rdf:Description rdf:about="#BelowDiaphragm"/>
+            <owl:Class>
+              <owl:oneOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#LAxilla"/>
+                <rdf:Description rdf:about="#LCervicalSCL"/>
+                <rdf:Description rdf:about="#Mesenteric"/>
+                <rdf:Description rdf:about="#RCervicalSCL"/>
+                <rdf:Description rdf:about="#RAxilla"/>
+              </owl:oneOf>
+            </owl:Class>
+          </owl:unionOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_symptoms"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#BSymptoms"/>
+            <rdf:Description rdf:about="#BSymptoms"/>
+            <owl:Class>
+              <owl:oneOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#weight loss"/>
+                <rdf:Description rdf:about="#fever"/>
+                <rdf:Description rdf:about="#night sweats"/>
+              </owl:oneOf>
+            </owl:Class>
+          </owl:unionOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#I">
+  <rdfs:subClassOf rdf:resource="#Stage"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Stage"/>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+              <owl:onClass rdf:resource="#ExtraNodalRegion"/>
+              <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+              <owl:onClass rdf:resource="#LymphNodeRegion"/>
+              <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+            </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Stage"/>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+              <owl:onClass rdf:resource="#LymphNodeRegion"/>
+              <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+              <owl:onClass rdf:resource="#ExtraNodalRegion"/>
+              <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+            </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_symptoms"/>
+      <owl:allValuesFrom rdf:resource="#BSymptoms"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#IA">
+  <rdfs:subClassOf rdf:resource="#I"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#I"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#has_symptoms"/>
+          <owl:onClass rdf:resource="#BSymptoms"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_symptoms"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#IB">
+  <rdfs:subClassOf rdf:resource="#I"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#I"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#has_symptoms"/>
+          <owl:someValuesFrom rdf:resource="#BSymptoms"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_symptoms"/>
+      <owl:allValuesFrom rdf:resource="#BSymptoms"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#II">
+  <rdfs:subClassOf rdf:resource="#Stage"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Stage"/>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+              <owl:onClass rdf:resource="#AboveDiaphragm"/>
+              <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+            </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Stage"/>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+              <owl:onClass rdf:resource="#BelowDiaphragm"/>
+              <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+            </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Stage"/>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+              <owl:onClass rdf:resource="#LymphNodeRegion"/>
+              <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+              <owl:onClass rdf:resource="#Localized"/>
+              <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_symptoms"/>
+      <owl:allValuesFrom rdf:resource="#BSymptoms"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#IIA">
+  <rdfs:subClassOf rdf:resource="#II"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#II"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#has_symptoms"/>
+          <owl:onClass rdf:resource="#BSymptoms"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_symptoms"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#IIB">
+  <rdfs:subClassOf rdf:resource="#II"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#II"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#has_symptoms"/>
+          <owl:someValuesFrom rdf:resource="#BSymptoms"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_symptoms"/>
+      <owl:allValuesFrom rdf:resource="#BSymptoms"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#III">
+  <rdfs:subClassOf rdf:resource="#Stage"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Stage"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+          <owl:someValuesFrom rdf:resource="#AboveDiaphragm"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+          <owl:someValuesFrom rdf:resource="#BelowDiaphragm"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+          <owl:allValuesFrom>
+            <owl:Class>
+              <owl:unionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#Localized"/>
+                <rdf:Description rdf:about="#Spleen"/>
+              </owl:unionOf>
+            </owl:Class>
+          </owl:allValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#AboveDiaphragm"/>
+            <rdf:Description rdf:about="#BelowDiaphragm"/>
+          </owl:unionOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_symptoms"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#IV">
+  <rdfs:subClassOf rdf:resource="#Stage"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Stage"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+          <owl:someValuesFrom rdf:resource="#Distant"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+          <owl:onClass rdf:resource="#LymphNodeRegion"/>
+          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+      <owl:allValuesFrom rdf:resource="#Distant"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_symptoms"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<AboveDiaphragm rdf:about="#RCervicalSCL">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AboveDiaphragm>
+
+<AboveDiaphragm rdf:about="#RAxilla">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AboveDiaphragm>
+
+<BSymptoms rdf:about="#fever">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</BSymptoms>
+
+<BSymptoms rdf:about="#night sweats">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</BSymptoms>
+
+<Stage rdf:about="#Caroline">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_lymph_node_region rdf:resource="#RAxilla"/>
+  <has_lymph_node_region rdf:resource="#RCervicalSCL"/>
+  <has_symptoms rdf:resource="#fever"/>
+  <has_symptoms rdf:resource="#night sweats"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdf:type>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#RCervicalSCL"/>
+            <rdf:Description rdf:about="#RAxilla"/>
+          </owl:oneOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdf:type>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_symptoms"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#fever"/>
+            <rdf:Description rdf:about="#night sweats"/>
+          </owl:oneOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdf:type>
+</Stage>
+
+<Localized rdf:about="#localized">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Localized>
+
+<BSymptoms rdf:about="#weight loss">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</BSymptoms>
+
+<Stage rdf:about="#Robert">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_extra_nodal_region rdf:resource="#localized"/>
+  <has_symptoms rdf:resource="#weight loss"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#localized"/>
+          </owl:oneOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdf:type>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdf:type>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_symptoms"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#weight loss"/>
+          </owl:oneOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdf:type>
+</Stage>
+
+<AboveDiaphragm rdf:about="#LAxilla">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AboveDiaphragm>
+
+<AboveDiaphragm rdf:about="#LCervicalSCL">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</AboveDiaphragm>
+
+<BelowDiaphragm rdf:about="#Mesenteric">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</BelowDiaphragm>
+
+<Spleen rdf:about="#spleen">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Spleen>
+
+<Stage rdf:about="#Betsy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_lymph_node_region rdf:resource="#LCervicalSCL"/>
+  <has_lymph_node_region rdf:resource="#LAxilla"/>
+  <has_lymph_node_region rdf:resource="#Mesenteric"/>
+  <has_extra_nodal_region rdf:resource="#spleen"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_extra_nodal_region"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#spleen"/>
+          </owl:oneOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdf:type>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_lymph_node_region"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#LAxilla"/>
+            <rdf:Description rdf:about="#LCervicalSCL"/>
+            <rdf:Description rdf:about="#Mesenteric"/>
+          </owl:oneOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdf:type>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_symptoms"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdf:type>
+</Stage>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#LAxilla"/>
+    <rdf:Description rdf:about="#LCervicalSCL"/>
+    <rdf:Description rdf:about="#Mesenteric"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#LAxilla"/>
+    <rdf:Description rdf:about="#LCervicalSCL"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#fever"/>
+    <rdf:Description rdf:about="#night sweats"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#RCervicalSCL"/>
+    <rdf:Description rdf:about="#RAxilla"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#LAxilla"/>
+    <rdf:Description rdf:about="#LCervicalSCL"/>
+    <rdf:Description rdf:about="#Mesenteric"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#LAxilla"/>
+    <rdf:Description rdf:about="#LCervicalSCL"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#fever"/>
+    <rdf:Description rdf:about="#night sweats"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#RCervicalSCL"/>
+    <rdf:Description rdf:about="#RAxilla"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#LAxilla"/>
+    <rdf:Description rdf:about="#LCervicalSCL"/>
+    <rdf:Description rdf:about="#Mesenteric"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#LAxilla"/>
+    <rdf:Description rdf:about="#LCervicalSCL"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#fever"/>
+    <rdf:Description rdf:about="#night sweats"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#RCervicalSCL"/>
+    <rdf:Description rdf:about="#RAxilla"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#LAxilla"/>
+    <rdf:Description rdf:about="#LCervicalSCL"/>
+    <rdf:Description rdf:about="#Mesenteric"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#LAxilla"/>
+    <rdf:Description rdf:about="#LCervicalSCL"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#fever"/>
+    <rdf:Description rdf:about="#night sweats"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#RCervicalSCL"/>
+    <rdf:Description rdf:about="#RAxilla"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#LAxilla"/>
+    <rdf:Description rdf:about="#LCervicalSCL"/>
+    <rdf:Description rdf:about="#Mesenteric"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#LAxilla"/>
+    <rdf:Description rdf:about="#LCervicalSCL"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#fever"/>
+    <rdf:Description rdf:about="#night sweats"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#RCervicalSCL"/>
+    <rdf:Description rdf:about="#RAxilla"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#LAxilla"/>
+    <rdf:Description rdf:about="#LCervicalSCL"/>
+    <rdf:Description rdf:about="#Mesenteric"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#LAxilla"/>
+    <rdf:Description rdf:about="#LCervicalSCL"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#fever"/>
+    <rdf:Description rdf:about="#night sweats"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#RCervicalSCL"/>
+    <rdf:Description rdf:about="#RAxilla"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+
+</rdf:RDF>
